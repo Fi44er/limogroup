@@ -1,10 +1,13 @@
 import './App.css'
+import Header from './components/header/Header'
+import HeaderIntro from './components/headerIntro/HeaderIntro'
 
 function App() {
 
   return (
     <>
-      <h1 className='m-10'>qwertyu</h1>
+      <Header />
+      <HeaderIntro />
     </>
   )
 }

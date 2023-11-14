@@ -1,0 +1,70 @@
+header {
+  @apply py-12 px-20 flex flex-row text-white justify-between items-center;
+}
+
+.headerLogo {
+}
+
+.headerFull {
+    @apply flex gap-14 w-2/3 justify-between items-center;
+  ul {
+    @apply flex gap-14 ;
+  }
+}
+
+.headerInfo {
+    @apply flex gap-7 items-center;
+  ul {
+    .beforArrow::before {
+        @apply content-[url('/src/assets/arrow.svg')] pr-2
+    }
+    li:hover ul {
+      @apply block;
+    }
+    li {
+      @apply cursor-pointer;
+      ul {
+        @apply absolute hidden pl-4;
+        li {
+          @apply relative list-item;
+        }
+        li:hover {
+          @apply text-slate-400;
+        }
+      }
+    }
+  }
+
+  button {
+    @apply bg-white text-black px-9 py-3 rounded-xl;
+    filter: drop-shadow(0px 15px 50px rgba(255, 255, 255, 0.25));
+  }
+}
+
+.header1500 {
+    @apply hidden;
+}
+
+@media(max-width: 1500px) {
+    .header1500 {
+        @apply flex w-2/3 justify-between items-center;
+        ul{
+            li:hover ul{
+                @apply block;
+            }
+            li{
+                ul{
+                    @apply absolute hidden w-36;
+                    li {
+                        @apply relative list-item;
+                    }
+                }
+            }
+        }
+    }
+
+    .headerFull {
+        @apply hidden
+    }
+
+}
